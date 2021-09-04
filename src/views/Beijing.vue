@@ -29,7 +29,7 @@
     <section class="next-day">
       <div class="weather-wrap">
         <div class="next-box">
-          <h2>Next 5/5 days</h2>
+          <h2>Next 5 days</h2>
         </div>
       </div>
       <div class="daily" v-for="day in daily" :key="day.dt">
