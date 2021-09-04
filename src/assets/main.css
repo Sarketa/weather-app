@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background-image: url("../assets/toplo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.4s;
+  padding: 3%;
+}
+section {
+  padding: 25px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0.781)
+  );
+}
+.next-box .lokacija {
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.next-box .date {
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 0.2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.weather-wrap {
+  text-align: center;
+}
+.weather-wrap .temperatura {
+  display: inline-block;
+  padding: 10px 25px;
+  color: rgb(0, 0, 0);
+  font-size: 3em;
+  font-weight: 900;
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  margin: 30px 0px;
+  box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.25);
+}
