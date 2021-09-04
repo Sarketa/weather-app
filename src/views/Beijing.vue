@@ -57,6 +57,7 @@ export default {
   components: { FilterNav, HourlyWeathers },
   data() {
     return {
+      //* data for fetching weather data
       weather: {
         cityName: "",
         country: "",
@@ -71,10 +72,12 @@ export default {
       iconLink: "http://openweathermap.org/img/wn/",
     };
   },
+  //* on created app runing getData method
   created() {
     this.getData();
   },
   methods: {
+    //* async function for featching data
     getData: async function() {
       const key = "1f89da47fe4d0be6bbbf376af70bdb58";
       const baseURL = `https://api.openweathermap.org/data/2.5/onecall?lat=40.09546&lon=116.42714&exclude=minutely,alerts&appid=${key}&units=metric`;
@@ -89,11 +92,13 @@ export default {
       this.hourly = data.hourly.slice(0, 4);
       this.weather.name = data.timezone;
     },
+    //* timstamp for days
     toDayOfWeek(timstamp) {
       const newDate = new Date(timstamp * 1000);
       const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
       return days[newDate.getDay()];
     },
+    //* button function reload page
     reloadPage() {
       window.location.reload();
     },

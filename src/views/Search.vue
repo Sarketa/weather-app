@@ -2,6 +2,7 @@
   <div id="app">
     <main>
       <section>
+        <!--on submit calling fetchWeather function to get data-->
         <form class="search-box" @submit.prevent="fetchWeather">
           <input
             type="text"
@@ -50,8 +51,10 @@ export default {
     };
   },
   methods: {
+    //* async function for featching data
     fetchWeather: async function() {
       const key = "266df4da89aea14f8ba1b8df800d3a36";
+      //* diferent URL for fetching data on input search
       const baseURL = `https://api.openweathermap.org/data/2.5/weather?q=${this.citySearch}&units=metric&appid=${key}&units=metric`;
       try {
         const res = await fetch(baseURL);
@@ -69,6 +72,7 @@ export default {
       }
       this.visible = true;
     },
+    //* day and month Date
     dateBuilder() {
       let d = new Date();
       let meseci = [
